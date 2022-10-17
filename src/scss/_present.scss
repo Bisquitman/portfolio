@@ -1,0 +1,100 @@
+.present {
+  // .present__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 30px;
+
+    @include tablet {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  // .present__photo
+  &__photo {
+    width: 100%;
+    object-fit: cover;
+    // max-width: 290px;
+
+    @include tablet {
+      max-width: 370px;
+    }
+
+    @include desktop {
+      max-width: 445px;
+    }
+  }
+
+  // .present__content
+  &__content {
+  }
+
+  // .present__group-title
+  &__group-title {
+    font-weight: 700;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  // .present__title
+  &__title {
+    font-size: 34px;
+    line-height: 120%;
+    margin-bottom: 10px;
+
+    @include tablet {
+      font-size: 40px;
+      margin-bottom: 24px;
+    }
+  }
+
+  // .present__subtitle
+  &__subtitle {
+    font-size: 16px;
+    line-height: 120%;
+
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+
+  // .present__description
+  &__description {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    margin-bottom: 20px;
+
+    @include tablet {
+      font-size: 16px;
+      margin-bottom: 60px;
+    }
+  }
+
+  // .present__order-btn
+  &__order-btn {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: $light;
+    text-transform: uppercase;
+    padding: 16px 60px;
+    border-radius: 4px;
+    background-color: $btn-color;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: darken($btn-color, 20%);
+    }
+
+    @include tablet {
+      font-size: 18px;
+      padding: 24px 82px;
+    }
+  }
+}
