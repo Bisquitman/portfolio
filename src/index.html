@@ -8,10 +8,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Кир Сорокин - создание сайтов для вашего бизнеса</title>
 
-  <link rel="preload" href="./assets/fonts/opensans-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./assets/fonts/opensans-500.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./assets/fonts/opensans-600.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="./assets/fonts/opensans-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/Open Sans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/Open Sans-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/Open Sans-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/Open Sans-700.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
@@ -71,20 +71,20 @@
 
         <div class="present__content">
           <hgroup class="present__group-title">
-            <h1 class="present__title">Кир Сорокин</h1>
+            <h1 class="section__title present__title">Кир Сорокин</h1>
             <h2 class="present__subtitle">Разработчик сайтов</h2>
           </hgroup>
 
-          <p class="present__description">Меня зовут Кир Сорокин, я разработчик сайтов с опытом 1 год</p>
+          <p class="present__description">Меня зовут Кир Сорокин, я разработчик сайтов с&nbsp;опытом 1&nbsp;год</p>
 
-          <button class="present__order-btn">Заказать</button>
+          <button class="present__order-btn order-btn">Заказать</button>
         </div>
       </div>
     </section>
 
     <section class="advantage">
       <div class="container">
-        <h2 class="advantage__title">Почему я</h2>
+        <h2 class="section__title advantage__title">Почему я</h2>
 
         <ul class="advantage__list">
           <li class="advantage__item advantage__item_stack">Стек: HTML, CSS, PHP, JavaScript, React</li>
@@ -99,11 +99,11 @@
 
     <section class="portfolio">
       <div class="container">
-        <h2 class="portfolio__title">Портфолио</h2>
+        <h2 class="section__title portfolio__title">Портфолио</h2>
 
-        <div class="portfolio__slider">
-          <ul class="portfolio__list">
-            <li class="portfolio__item">
+        <div class="portfolio__slider swiper">
+          <ul class="portfolio__list swiper-wrapper">
+            <li class="portfolio__item swiper-slide">
               <article class="card">
                 <img src="./img/cinema-min.jpg" alt="" class="card__picture">
 
@@ -116,7 +116,7 @@
               </article>
             </li>
 
-            <li class="portfolio__item">
+            <li class="portfolio__item swiper-slide">
               <article class="card">
                 <img src="./img/dom-min.jpg" alt="" class="card__picture">
 
@@ -129,7 +129,7 @@
               </article>
             </li>
 
-            <li class="portfolio__item">
+            <li class="portfolio__item swiper-slide">
               <article class="card">
                 <img src="./img/friendly_house-min.jpg" alt="" class="card__picture">
 
@@ -142,7 +142,7 @@
               </article>
             </li>
 
-            <li class="portfolio__item">
+            <li class="portfolio__item swiper-slide">
               <article class="card">
                 <img src="./img/go-min.jpg" alt="" class="card__picture">
 
@@ -155,7 +155,7 @@
               </article>
             </li>
 
-            <li class="portfolio__item">
+            <li class="portfolio__item swiper-slide">
               <article class="card">
                 <img src="./img/iphone-min.jpg" alt="" class="card__picture">
 
@@ -170,10 +170,69 @@
             </li>
 
           </ul>
+
+          <button class="portfolio__arrow portfolio__arrow_left"></button>
+          <button class="portfolio__arrow portfolio__arrow_right"></button>
         </div>
       </div>
     </section>
   </main>
+
+  <div class="page__overlay page__overlay_modal">
+    <div class="modal">
+      <h2 class="modal__title">Заполниет форму, и я свяжусь с вами</h2>
+
+      <form class="modal__form callback">
+        <fieldset class="callback__group bio">
+          <legend class="visually-hidden">Личные данные</legend>
+          <label class="callback__label">
+            <span class="callback__label-text">ФИО</span>
+            <input type="text" class="callback__input" name="bio" placeholder="Введите ваши ФИО">
+          </label>
+          <label class="callback__label">
+            <span class="callback__label-text">Телефон</span>
+            <input type="text" class="callback__input" name="phone" placeholder="Введите ваш номер телефона">
+          </label>
+        </fieldset>
+
+        <fieldset class="callback__group connect">
+          <legend class="connect__title">Где удобнее связаться?</legend>
+
+          <label class="connect__label">
+            <input type="radio" class="connect__radio" name="connect" value="telegram">
+            <span class="connect__text">Телеграм</span>
+          </label>
+
+          <label class="connect__label">
+            <input type="radio" class="connect__radio" name="connect" value="whatsup">
+            <span class="connect__text">Whatsup</span>
+          </label>
+
+          <label class="connect__label">
+            <input type="radio" class="connect__radio" name="connect" value="call">
+            <span class="connect__text">Позвонить</span>
+          </label>
+
+          <label class="connect__label">
+            <input type="radio" class="connect__radio" name="connect" value="viber">
+            <span class="connect__text">Viber</span>
+          </label>
+        </fieldset>
+
+        <button type="submit" class="callback__btn order-btn">Заказать</button>
+      </form>
+
+      <button class="modal__close">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <rect width="29.1681" height="1.94454" rx="0.972271"
+            transform="matrix(0.707106 -0.707107 0.707106 0.707107 0 20.625)" />
+          <rect width="29.1681" height="1.94454" rx="0.972271"
+            transform="matrix(0.707106 0.707107 -0.707106 0.707107 1.375 0)" />
+        </svg>
+
+      </button>
+    </div>
+  </div>
 </body>
 
 </html>

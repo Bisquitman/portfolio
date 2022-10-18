@@ -1,8 +1,11 @@
 // Цвета
-$light: #FFFFFF;
+$light: #ffffff;
 $dark: #110303;
-$bg-secondary-color: #A1B7C8;
-$btn-color: #E87C40;
+$grey: #646464;
+$light-grey: #AFAFAF;
+$bg-secondary-color: #a1b7c8;
+$btn-color: #e87c40;
+$btn-close: #282626;
 
 // Медиа-запросы
 @mixin tablet {
@@ -23,9 +26,15 @@ $btn-color: #E87C40;
   }
 }
 
-@mixin miw ($width) {
+@mixin miw($width) {
   @media (min-width: $width) {
-    @content
+    @content;
+  }
+}
+
+@mixin maw($width) {
+  @media (max-width: $width) {
+    @content;
   }
 }
 
@@ -37,7 +46,7 @@ $btn-color: #E87C40;
       weight: $weight;
       display: swap;
     }
-    src: url("../assets/fonts/#{ $name }-#{ $weight }.woff2") format("woff2"),
-    url("../assets/fonts/#{ $name }-#{ $weight }.woff") format("woff");
+    src: url('../assets/fonts/#{ $name }-#{ $weight }.woff2') format('woff2'),
+      url('../assets/fonts/#{ $name }-#{ $weight }.woff') format('woff');
   }
 }

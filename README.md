@@ -10,6 +10,8 @@
 - [GitHub](https://github.com/)
 - [Шрифты от дизайнера](https://fs09.getcourse.ru/fileservice/file/download/a/251231/sc/299/h/166f35ec802dfd2f6ba868bf66c22fe3.zip)
 - [Normalize.css](https://necolas.github.io/normalize.css/)
+-[Swiper - слайдер](https://swiperjs.com/)
+-[jQuery - библиотека для работы с DOM](https://jquery.com/)
 
 
 ***

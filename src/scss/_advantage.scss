@@ -1,38 +1,102 @@
 .advantage {
+  // .advantage__title
+  &__title {
+    margin-bottom: 40px;
 
-		// .advantage__title
-		&__title {
-		}
+    @include tablet {
+      margin-bottom: 50px;
+    }
 
-		// .advantage__list
-		&__list {
-		}
+    @include desktop {
+      margin-bottom: 80px;
+    }
+  }
 
-		// .advantage__item
-		&__item {
+  // .advantage__list
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 
-			// .advantage__item_stack
-			&_stack {
-			}
+    @include tablet {
+      gap: 80px;
+      justify-content: space-between;
+    }
 
-			// .advantage__item_mockup
-			&_mockup {
-			}
+    @include desktop {
+      gap: 100px;
+    }
+  }
 
-			// .advantage__item_inclusive
-			&_inclusive {
-			}
+  // .advantage__item
+  &__item {
+    flex-basis: 290px;
+    min-height: 61px;
+    font-size: 14px;
+    line-height: 140%;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 61px;
+    padding: 10px 10px 10px 81px;
 
-			// .advantage__item_adapt
-			&_adapt {
-			}
+    @include tablet {
+      font-size: 16px;
+    }
 
-			// .advantage__item_clear
-			&_clear {
-			}
+    @include desktop {
+      font-size: 18px;
+    }
 
-			// .advantage__item_copyright
-			&_copyright {
-			}
-		}
+    // .advantage__item_stack
+    &_stack {
+      background-image: url('../img/stack.svg');
+      order: 0;
+    }
+
+    // .advantage__item_mockup
+    &_mockup {
+      background-image: url('../img/mockup.svg');
+
+      @include tablet {
+        order: 2;
+      }
+    }
+
+    // .advantage__item_inclusive
+    &_inclusive {
+      background-image: url('../img/inclusive.svg');
+
+      @include tablet {
+        order: 4;
+      }
+    }
+
+    // .advantage__item_adapt
+    &_adapt {
+      background-image: url('../img/adapt.svg');
+
+      @include tablet {
+        order: 1;
+      }
+    }
+
+    // .advantage__item_clear
+    &_clear {
+      background-image: url('../img/clear.svg');
+
+      @include tablet {
+        order: 3;
+      }
+    }
+
+    // .advantage__item_copyright
+    &_copyright {
+      background-image: url('../img/copyright.svg');
+
+      @include tablet {
+        order: 5;
+      }
+    }
+  }
 }

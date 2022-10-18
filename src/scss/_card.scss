@@ -1,0 +1,63 @@
+.card {
+  box-sizing: border-box;
+  max-width: 252px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 14px;
+
+  @include desktop {
+    max-width: 366px;
+  }
+
+  // .card__picture
+  &__picture {
+    width: 155px;
+    height: 92px;
+    padding: 5px 18px 12px;
+    background-image: url('../img/macbook.svg');
+    background-size: cover;
+    align-self: center;
+    margin-bottom: 30px;
+
+    @include desktop {
+      width: 213px;
+      height: 126px;
+      padding: 6px 26px 15px;
+    }
+  }
+
+  // .card__data
+  &__data {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 23px;
+
+    @include desktop {
+      font-size: 16px;
+    }
+  }
+
+  // .card__client
+  &__client {
+    line-height: 120%;
+  }
+
+  // .card__date
+  &__date {
+    line-height: 140%;
+  }
+
+  // .card__title
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+
+    @include desktop {
+      font-size: 18px;
+    }
+  }
+}

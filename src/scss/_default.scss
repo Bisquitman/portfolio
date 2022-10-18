@@ -76,6 +76,12 @@ fieldset {
   padding: 0;
 }
 
+legend {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
 iframe {
   border: none;
 }
@@ -86,8 +92,7 @@ iframe {
 
 .visually-hidden {
   position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
   clip: rect(1px, 1px, 1px, 1px);
   padding: 0 !important;
   border: 0 !important;
@@ -114,7 +119,7 @@ iframe {
   }
 
   @include laptop {
-    padding: 0 30px;
+    padding: 0 30px 0 270px;
   }
 }
 
@@ -129,14 +134,41 @@ iframe {
 */
 section {
   padding: 30px 0;
+
+  @include tablet {
+    padding: 50px 0;
+  }
+
+  @include laptop {
+    padding: 65px 0;
+  }
+
+  @include desktop {
+    padding: 75px 0;
+  }
+}
+
+.section__title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  @include tablet {
+    font-size: 40px;
+  }
+
+  @include desktop {
+    font-size: 50px;
+  }
 }
 
 .page {
   @include desktop {
     background-image: linear-gradient(
       to right,
-      $bg-secondary-color 355/1440 * 100%,
-      transparent 355/1440 * 100%
+      $bg-secondary-color calc(355 / 1440 * 100%),
+      transparent calc(355 / 1440 * 100%)
     );
   }
 
@@ -158,6 +190,45 @@ section {
 
     @include desktop {
       left: calc(50% - 1440px / 2); // 1440px - ширина медиа-запроса "desktop"
+    }
+  }
+
+  .order-btn {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: $light;
+    text-transform: uppercase;
+    padding: 16px 60px;
+    border-radius: 4px;
+    background-color: $btn-color;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: darken($btn-color, 20%);
+    }
+
+    @include tablet {
+      font-size: 18px;
+      padding: 24px 82px;
+    }
+  }
+
+  // .page__overlay
+  &__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: auto;
+    padding: 15px;
+    display: flex;
+    z-index: 99;
+
+    &_modal {
+      display: none;
     }
   }
 }

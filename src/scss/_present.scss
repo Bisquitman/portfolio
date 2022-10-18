@@ -1,11 +1,31 @@
 .present {
+  @include tablet {
+    padding-top: 70px;
+  }
+
+  @include laptop {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 40%;
+      height: 100%;
+      background-color: $bg-secondary-color;
+      z-index: -1;
+    }
+  }
+
   // .present__container
   &__container {
     display: flex;
     flex-direction: column;
     gap: 20px 30px;
 
-    @include tablet {
+    @include miw(480px) {
       flex-direction: row;
       align-items: center;
     }
@@ -15,14 +35,18 @@
   &__photo {
     width: 100%;
     object-fit: cover;
-    // max-width: 290px;
+    max-width: 290px;
+
+    @include miw(480px) {
+      width: 50%;
+    }
 
     @include tablet {
-      max-width: 370px;
+      width: 370px;
     }
 
     @include desktop {
-      max-width: 445px;
+      width: 445px;
     }
   }
 
@@ -44,11 +68,9 @@
   // .present__title
   &__title {
     font-size: 34px;
-    line-height: 120%;
     margin-bottom: 10px;
 
     @include tablet {
-      font-size: 40px;
       margin-bottom: 24px;
     }
   }
@@ -78,23 +100,6 @@
 
   // .present__order-btn
   &__order-btn {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 140%;
-    color: $light;
-    text-transform: uppercase;
-    padding: 16px 60px;
-    border-radius: 4px;
-    background-color: $btn-color;
-    transition: background-color 0.2s ease-in-out;
 
-    &:hover {
-      background-color: darken($btn-color, 20%);
-    }
-
-    @include tablet {
-      font-size: 18px;
-      padding: 24px 82px;
-    }
   }
 }

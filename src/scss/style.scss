@@ -2,6 +2,8 @@
 
 @include normalize();
 
+@import "../libs/swiper/swiper-bundle.min";
+
 @import 'variables';
 @import "fonts";
 @import "default";
@@ -10,3 +12,5 @@
 @import "present";
 @import "advantage";
 @import "portfolio";
+@import "card";
+@import "modal";

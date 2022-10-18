@@ -1,41 +1,77 @@
 .portfolio {
+  // .portfolio__title
+  &__title {
+    margin-bottom: 40px;
 
-		// .portfolio__title
-		&__title {
-		}
+    @include tablet {
+      margin-bottom: 50px;
+    }
 
-		// .portfolio__slider
-		&__slider {
-		}
+    @include desktop {
+      margin-bottom: 80px;
+    }
+  }
 
-		// .portfolio__list
-		&__list {
-		}
+  // .portfolio__slider
+  &__slider {
+    position: relative;
+    max-width: 290px;
+    margin: 0 auto;
 
-		// .portfolio__item
-		&__item {
-		}
-}
+    @include miw(480px) {
+      max-width: 340px;
+    }
 
-.card {
+    @include tablet {
+      max-width: 688px;
+    }
 
-		// .card__picture
-		&__picture {
-		}
+    @include desktop {
+      max-width: 825px;
+    }
+  }
 
-		// .card__data
-		&__data {
-		}
+  // .portfolio__list
+  &__list {
+  }
 
-		// .card__client
-		&__client {
-		}
+  // .portfolio__item
+  &__item {
+    &:nth-child(odd) {
+      background: linear-gradient(90.67deg, #ECEBEB 0.55%, #F7F7F7 99.42%);
+    }
+  }
 
-		// .card__date
-		&__date {
-		}
+  // .portfolio__arrow
+  &__arrow {
+    position: absolute;
+    display: block;
+    width: 26px;
+    height: 26px;
+    background-image: url("../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    z-index: 5;
 
-		// .card__title
-		&__title {
-		}
+    // .portfolio__arrow_left
+    &_left {
+      transform: rotate(90deg);
+      top: 50%;
+      left: 0;
+    }
+
+    // .portfolio__arrow_right
+    &_right {
+      transform: rotate(-90deg);
+      top: 50%;
+      right: 0;
+    }
+
+    // .portfolio__arrow_disabled
+    &_disabled {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+  }
 }
